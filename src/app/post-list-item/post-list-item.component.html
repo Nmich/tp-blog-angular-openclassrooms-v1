@@ -1,0 +1,15 @@
+<li 
+[ngClass]="{'list-group-item list-group-item-action flex-column align-items-start border-0': true,
+'list-group-item-success': loveIts > 0,
+'list-group-item-danger': loveIts < 0}"
+>
+  <a href="#" class="text-dark">
+    <div class="d-flex justify-content-between">
+      <h5 [ngClass]="{'mb-1': true, 'text-success': loveIts > 0 , 'text-danger': loveIts < 0}">{{title}}</h5>
+      <small class="font-italic">{{ date }}</small>
+    </div>
+    <p [ngClass]="{'mb-1': true, 'text-success': loveIts > 0 , 'text-danger': loveIts < 0}">{{content}}</p>
+  </a>
+    <button class="btn btn-sm btn-success mr-2" (click)="onLoveIt()">love it</button>
+    <button class="btn btn-sm btn-danger" (click)="onDontLoveIt()">don't love it</button>
+</li>
